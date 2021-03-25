@@ -1,4 +1,4 @@
-name = "DccSocketServer"
+name = "dccSocketServer"
 
 version = "0.0.0"
 
@@ -9,12 +9,7 @@ description = \
     """
 
 requires = [
-    "python-3.7.7",
-    "PyYAML-5.4.1",
-    "os",
-    "Sphinx",
-    "sphinx_rtd_theme",
-    "sphinx_markdown_builder",
+    # ONLY PY2 library
 ]
 
 
@@ -31,7 +26,8 @@ timestamp = 0
 def commands():
     env.PATH.append("{root}/src")
     env.PATH.append("{root}")
-    env.PYTHONPATH.append("{root}/src")
+    env.PYTHONPATH.append('C:/Maya2019/Python/Lib/site-packages')
+    env.MAYA_SCRIPT_PATH.append("{root}/src")
 
 
 vcs = "git"
